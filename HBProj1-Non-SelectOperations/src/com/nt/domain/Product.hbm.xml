@@ -1,0 +1,34 @@
+
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Hibernate-mapping -->
+<!-- <class name="com.nt.domain.Product" table="PRODUCT">
+
+<id name="pid" column="PID" length="10" type="int"></id>
+<property name="pname" column="PNAME" length="15" type="string"/>
+<property name="price" column="PRICE" length="10" type="float"/>
+<property name="qty" column="QTY" length="10" type="int"/>
+<property name="isExpire" column="ISEXPIRE" type="boolean"/>
+</class> -->
+
+<!-- 2nd way -->
+<hibernate-mapping package="com.nt.domain">
+<class name="Product">
+<id name="pid" type="int" length="10">
+<column name="PID"/>
+</id>
+<property name="pname">
+<column name="PNAME"/>
+</property>
+<property name="price">
+<column name="PRICE"/>
+</property>
+<property name="qty">
+<column name="QTY"/>
+
+</property>
+</class>
+</hibernate-mapping>
+
+
