@@ -1,0 +1,28 @@
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+  <hibernate-configuration>
+    <session-factory>
+        <!-- JDBC Connection properties -->
+     <property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+     <property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+     <property name="connection.username">system</property>
+     <property name="connection.password">password</property>
+       <!-- Hibernate properties -->
+     <property name="show_sql">true</property>
+     <property name="format_sql">true</property>
+     <property name="dialect">org.hibernate.dialect.Oracle10gDialect</property>
+     <property name="hbm2ddl.auto">update</property>
+<!--        Hikari specific properties -->
+<!--       <property name="connection.provider_class">com.zaxxer.hikari.hibernate.HikariConnectionProvider</property> -->
+<!--      <property name="hikari.dataSource.cachePrepStmts">true</property> -->
+<!--      <property name="hikari.dataSource.prepStmtCacheSize">250</property> -->
+<!--      <property name="hikari.dataSource.prepStmtCacheSqlLimit">2048</property> -->
+<!--      <property name="hikari.dataSource.useServerPrepStmts">true</property> -->
+<!--      <property name="hikari.maximumPoolSize">30</property> -->
+<!--      <property name="hikari.idleTimeout">30000</property> -->
+<!--        Mapping files Info -->
+       <mapping resource="com/nt/cfgs/Employee.hbm.xml"/>   
+    </session-factory>
+  </hibernate-configuration>        

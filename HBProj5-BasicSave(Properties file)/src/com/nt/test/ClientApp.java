@@ -37,7 +37,7 @@ public class ClientApp {
 		//Create Session Obj
 		 ses=factory.openSession();
 		//create Domain class Obj with data
-		 emp=ses.get(EmpDetails.class,101);
+		 emp=ses.get(EmpDetails.class,111);
 		 if(emp!=null)
 			 System.out.println(emp);
 		 
