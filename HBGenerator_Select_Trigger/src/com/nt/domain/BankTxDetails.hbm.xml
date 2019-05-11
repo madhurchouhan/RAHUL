@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+            <!--This mapping demonstrates -->
+<hibernate-mapping >
+ 	<class name="com.nt.domain.BankTxDetails" table="TRG_BANK"> 
+	<id name="txid" type="int" length="10">
+      <generator class="select">
+          <param name="key">txAmount</param>
+      </generator>  
+	</id>
+    <property name="txName" length="16" type="string"/>
+	<property name="txAmount" length="6" type="float" not-null="true"/>
+	<property name="txDate" type="date"/>
+	</class>
+</hibernate-mapping>

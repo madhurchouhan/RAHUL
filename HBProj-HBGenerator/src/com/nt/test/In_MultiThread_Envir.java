@@ -8,7 +8,7 @@ import com.nt.utility.HibernateUtil;
 //this is suitable for multi-Threaded environment
 //& also suitable for Cluster environment
 //this is the example of multi.. Environ
-public class Increment_Generator2 {
+public class In_MultiThread_Envir {
 
 	public static void main(String[] args) {
 		RequestThread t1=null,t2=null;

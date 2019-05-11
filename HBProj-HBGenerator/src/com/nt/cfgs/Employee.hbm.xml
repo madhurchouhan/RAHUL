@@ -13,7 +13,7 @@
 <!-- 	<generator class="sequence"></generator> -->
 	<!--it does not bother about you use generator or not,it doesnt consider deleted PK col value -->
 	<generator class="sequence"><!-- for custom sequence -->
-	<param name="sequence_name">eid_seq</param>
+<!-- 	<param name="sequence_name">eid_seq</param> -->
 	</generator>
 	
 	</id>

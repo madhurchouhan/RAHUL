@@ -1,0 +1,21 @@
+//open sql as adminis.
+SQL>>ed
+==>>this is trigger creation process
+
+CREATE OR REPLACE TRIGGER TXID_TGR_BEFORE_INSERT
+BEFORE INSERT ON TRG_BANK FOR EACH ROW
+DECLARE
+tempTxId number(10);
+
+BEGIN
+--Get TxId by executing Sequence
+SELECT TXID_SEQ.NEXTVAL INTO tempTxid from dual;
+--Update TXID column with Sequence generated value
+:new.TXID:=tempTxId;
+END;
+
+
+==>>after creating save & exit
+SQL>>/
+sql shows
+SQL>>Trigger created.
